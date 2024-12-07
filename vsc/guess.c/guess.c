@@ -4,18 +4,15 @@
 
 int main() {
     int number_to_guess, guess, chances, i;
-        double s=clock();
-    // Seed the random number generator4
-    
+
+    // Seed the random number generator
+    srand(time(0));
     number_to_guess = rand() % 100 + 1; // Random number between 1 and 100
-        
+
     // Get the number of chances from the user
     printf("Enter the number of chances you want: ");
     scanf("%d", &chances);
-    double e=clock();
 
-     number_to_guess*= (e-s)/10000 ;
-    printf("%d",(e-s)*10) ;
     printf("Guess the number (between 1 and 100). You have %d chances.\n", chances);
 
     for (i = 1; i <= chances; i++) {
@@ -37,4 +34,4 @@ int main() {
     }
 
     return 0;
-    }
+}
